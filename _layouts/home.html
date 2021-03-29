@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html>                     <!--<![endif]-->
+
+  {% include head.html %}
+
+  <body>
+    <div class="template-styleguide">
+      {% include header.html section="Style Guide" %}
+      <div class="main-content">
+        <div class="grid-box">
+            <div class="col-4">
+              <div class="list-group">
+                <a href="/" class="list-group__item {% if page.url == '/' %}list-group__item--active{% endif %}">Introduction</a> 
+                <a href="{% link usage.md %}" class="list-group__item {% if page.url == '/usage/' %}list-group__item--active{% endif %}">Usage Instructions</a>
+              </div>
+              <p class="h4">Core</p>
+              <div class="list-group">
+                {% assign menu_items = site.core | sort: "title" %}
+                {% for item in menu_items %}
+                <a href="{{ item.url }}" class="list-group__item {% if page.url == item.url %}list-group__item--active{% endif %}">{{ item.title }}</a>
+                {% endfor %}
+              </div>
+
+              <p class="h4">Atoms</p>
+              <div class="list-group">
+                {% assign menu_atoms = site.atoms | sort: "title" %}
+                {% for item in menu_atoms %}
+                <a href="{{ item.url }}" class="list-group__item {% if page.url == item.url %}list-group__item--active{% endif %}">{{ item.title }}</a>
+                {% endfor %}
+              </div>
+                
+              <p class="h4">Molecules</p>
+              <div class="list-group">
+                {% assign menu_items = site.molecules | sort: "title" %}
+                {% for item in menu_items %}
+                <a href="{{ item.url }}" class="list-group__item {% if page.url == item.url %}list-group__item--active{% endif %}">{{ item.title }}</a>
+                {% endfor %}
+              </div>
+
+              <p class="h4">Organisms</p>
+              <div class="list-group">
+                {% assign menu_items = site.organisms | sort: "title" %}
+                {% for item in menu_items %}
+                <a href="{{ item.url }}" class="list-group__item {% if page.url == item.url %}list-group__item--active{% endif %}">{{ item.title }}</a>
+                {% endfor %}
+              </div>
+
+              <p class="h4">Developers</p>
+              <div class="list-group">
+                {% assign menu_items = site.developers | sort: "title" %}
+                {% for item in menu_items %}
+                <a href="{{ item.url }}" class="list-group__item {% if page.url == item.url %}list-group__item--active{% endif %}">{{ item.title }}</a>
+                {% endfor %}
+              </div>
+
+            </div>
+            <article class="col-8">
+              <header class="page-header">
+                <h1 class="style-guide-heading">{{ page.title }}</h1>
+                {% if page.description %}<p class="lead-in-text">{{ page.description }}</p>{% endif %}
+              </header>
+              {{ content }}
+            </article>
+          </div>
+        </div>
+    </div>
+    <script src="{{ '/js/jquery-1.11.2.min.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/js/prism.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/js/styleguide.js' | prepend: site.baseurl }}"></script>
+    <!--[if lt IE 9]>
+      <script src="{{ '/js/rem.min.js' | prepend: site.baseurl }}"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+  </body>
+
+</html>

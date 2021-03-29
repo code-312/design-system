@@ -1,0 +1,16 @@
+table {
+  margin-bottom: 1em;
+  min-width: 100%;
+
+  thead {
+    th {
+      background-color: $color-lightest-gray;
+      text-align: left;
+    }
+  }
+
+  th, td {
+    border: 1px solid $color-dark-gray;
+    padding: 0.5em 0.7em;
+  }
+}

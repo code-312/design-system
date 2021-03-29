@@ -1,0 +1,23 @@
+figure {
+  margin-bottom: $space-lg;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: $space-lg;
+  width: 100%;
+
+  img {
+    border: 1px solid $color-light-gray;
+  }
+
+  figcaption {
+    color: $color-darkest-gray;
+    font-size: $small-font-size;
+    margin-top: $space-sm;
+
+    > p {
+      @include detail-text;
+      font-family: $font-sans;
+      margin: 0;
+    }
+  }
+}

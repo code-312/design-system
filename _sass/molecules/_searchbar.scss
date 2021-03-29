@@ -1,0 +1,45 @@
+.searchbar {
+  @include clearfix;
+
+  background-color: $color-white;
+  border: 1px solid $color-gray;
+
+  .searchbar-input, .searchbar-button {
+    float: left;
+    height: 2em;
+    margin: 0;
+  }
+
+  .searchbar-input {
+    border: 0;
+    width: calc(100% - 40px);
+
+    .lt-ie9 & {
+      width: 85%;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .searchbar-button {
+    background-color: $color-light-gray;
+    background-size: auto 70%;
+    border: 0;
+    font-family: "FontAwesome";
+    font-weight: 400;
+    position: relative;
+    width: 40px;
+
+    &::before {
+      content: "\f002";
+    }
+
+    .lt-ie9 & {
+      background-image: none;
+      text-indent: 0;
+      width: 15%;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+// Buttons
+.button {
+  background-color: $color-light-gray;
+  border: 1px solid $color-light-gray;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: $base-font-size;
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin-bottom: $space-sm;
+  margin-right: $space-sm;
+  outline: none;
+  padding: $space-xs $space-sm;
+  text-align: center;
+  text-decoration: none;
+
+  // a.button
+  @at-root a#{&} {
+    color: $color-black;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &:hover {
+    background-color: $color-gray;
+    border: 1px solid $color-gray;
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: $color-gray;
+    border: 1px solid $color-gray;
+    text-decoration: none;
+  }
+
+  &:focus {
+    border: 1px solid $color-blue;
+    box-shadow: 0 0 0 1px $color-blue;
+    text-decoration: none;
+  }
+
+  &:disabled {
+    background-color: $color-gray;
+    color: $color-gray;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $color-gray;
+      border: 1px solid $color-gray;
+    }
+  }
+}
+
+// Mixins
+
+%button--dark {
+  color: $color-white;
+
+  // a.button
+  @at-root a#{&} {
+    color: $color-white;
+  }
+}
+
+
+// Variants
+
+.button--primary,
+.button-primary {
+  @extend %button--dark;
+
+  background-color: $color-red;
+  border-color: $color-red;
+
+  &:hover {
+    background-color: $color-dark-red;
+    border-color: $color-dark-red;
+  }
+}
+
+.button--secondary,
+.button-secondary {
+  @extend %button--dark;
+  
+  background-color: $color-blue;
+  border-color: $color-blue;
+
+  &:hover {
+    background-color: $color-dark-blue;
+    border-color: $color-dark-blue;
+  }
+}
+
+.button--danger,
+.button-danger {
+  background-color: transparent;
+  border-color: $color-gray;
+  color: $color-danger;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $color-danger;
+  }
+}
+
+.button--reverse,
+.button-reverse {
+  @extend %button--dark;
+
+  background-color: transparent;
+  border-color: $color-white;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $color-white;
+    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.button--outline,
+.button-outline {
+  background-color: transparent;
+  border-color: $color-gray;
+  color: $color-black;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $color-black;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+// Sizes
+
+.button--sm,
+.button-small {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  padding: $space-xs $space-sm;
+}
+
+.button--lg,
+.button-large {
+  font-size: 1.2rem;
+  padding: $space-sm $space-md;
+}
+

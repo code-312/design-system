@@ -1,0 +1,95 @@
+.slab {
+  @include clearfix;
+
+  @include media($tablet-up) {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  margin-left: -$site-margins;
+  margin-right: -$site-margins;
+  padding: 2rem $site-margins;
+
+  h1, h2, h3, h4, h5, h6, .grid-box {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $site-max-width;
+  }
+
+}
+
+.slab-title {
+  @include h3;
+  font-weight: 600;
+}
+
+
+// Variants
+
+.slab--compact,
+.tight-slab {
+  @include media($tablet-up) {
+    padding: 2rem $site-margins;
+  }
+
+  padding: 2rem $site-margins;
+}
+
+.slab--angled {
+  clip-path: polygon(
+    0 3vw,
+    100% 0,
+    100% calc(100% - 3vw),
+    0 100%
+  );
+  margin-bottom: -3vw;
+  margin-top: -3vw;
+  z-index: 2;
+}
+
+// Slabs with background colors
+%reverse-slab {
+  color: $color-white;
+}
+
+.slab--white,
+.white-bg-slab {
+  background-color: $color-white;
+}
+
+.slab--dark-blue,
+.dark-blue-bg-slab {
+  @extend %reverse-slab;
+  background-color: $color-dark-blue;
+}
+
+.slab--darkest-blue,
+.darkest-blue-bg-slab {
+  @extend %reverse-slab;
+  background-color: $color-darkest-blue;
+}
+
+.slab--gray,
+.gray-bg-slab {
+  background-color: $color-lightest-gray;
+}
+
+.slab--darkest-gray {
+  @extend %reverse-slab;
+  background-color: $color-darkest-gray;
+}
+
+.slab--dark-red,
+.red-bg-slab {
+  @extend %reverse-slab;
+  background-color: $color-dark-red;
+}
+
+.slab--darkest-red {
+  @extend %reverse-slab;
+  background-color: $color-darkest-red;
+}
+

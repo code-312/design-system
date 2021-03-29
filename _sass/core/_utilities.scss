@@ -1,0 +1,34 @@
+// Mobile-first media query helper
+@mixin media($bp) {
+  @media screen and (min-width: #{$bp}) {
+    @content;
+  }
+}
+
+// Clearfix helper
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    }
+}
+
+.float--left,
+.align-left {
+  float: left;
+}
+
+.float--right,
+.align-right {
+  float: right;
+}
+
+@mixin icon {
+  display: inline-block;
+  font-family: $font-icon;
+  font-size: 14px;
+  font-weight: 400;
+}

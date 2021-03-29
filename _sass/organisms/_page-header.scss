@@ -1,0 +1,12 @@
+.page-header {
+  @include media($tablet-up) {
+    margin-bottom: $space-md;
+  }
+
+  margin-bottom: $space-sm;
+
+  // Pull title text close to breadcrumbs, a common pattern
+  .breadcrumbs + h1.title-text {
+    margin-top: $space-sm;
+  }
+}

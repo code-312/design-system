@@ -1,0 +1,150 @@
+.card, a.card {
+  background-color: $color-white;
+  border: 1px solid $color-light-gray;
+  color: $color-black;
+  display: block;
+  flex: 1;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 0;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+
+    .card__link,
+    .card-link {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Card subcomponents
+
+.card__image,
+.card-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid $color-light-gray;
+  padding-top: 66.66%;
+}
+
+.card__image--contained {
+  background-size: auto 80%;
+}
+
+.card__content,
+.card-content {
+  padding: 1rem;
+}
+
+.card__button,
+.card-button {
+  display: inline-block;
+  margin: 0.5rem 0 0;
+}
+
+.card__link,
+.card-link {
+  @extend a;
+}
+
+.card__icon,
+.card-icon {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  max-width: 125px;
+}
+
+.card__overhead,
+.card-overhead {
+  @include h6;
+  color: $color-dark-gray;
+
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.card__title,
+.card-title {
+  @include h4;
+
+  margin-top: 0;
+
+  .card__overhead + &,
+  .card-overhead + & {
+    margin-top: 0.25rem;
+  }
+}
+
+
+// Variants
+
+.card--supporter, a.card--supporter,
+.supporter-card, a.supporter-card {
+  text-align: center;
+
+  .card__image,
+  .card-image {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+    width: 80%;
+  }
+}
+
+.card--action-card, a.card--action-card {
+  border: 0;
+  text-align: center;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.card--index-card, a.card--index-card,
+.index-card, a.index-card {
+  border: 1px solid $color-light-gray;
+  margin-bottom: 1rem;
+  overflow: hidden;
+
+  .card__image,
+  .card-image {
+    display: block;
+    margin-bottom: -0.5rem;
+    margin-left: -1rem;
+    margin-top: -1rem;
+    width: 100%;
+  }
+
+  .card__logo,
+  .card-logo {
+    display: block;
+    margin-bottom: -0.5rem;
+    margin-left: -1rem;
+    margin-top: -1rem;
+    width: 70%;
+  }
+
+  .card__icon,
+  .card-icon {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.card--horizontal, a.card--horizontal {
+  display: flex;
+  flex-direction: row;
+
+  .card__image {
+    flex: 0 0 33%;
+    padding-top:0 ;
+  }
+}
