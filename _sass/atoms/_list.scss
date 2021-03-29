@@ -1,0 +1,42 @@
+ul {
+  list-style-type: disc;
+  margin-bottom: $space-sm;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: $space-sm;
+  padding-left: 1.5rem;
+
+  li {
+    line-height: $base-line-height;
+    margin-bottom: $space-sm;
+    margin-top: $space-sm;
+    padding-left: 0;
+  }
+}
+
+ol {
+  list-style-type: decimal;
+  margin-bottom: $space-sm;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: $space-sm;
+  padding-left: 1.25rem;
+
+  li {
+    line-height: $base-line-height;
+    margin-bottom: $space-sm;
+    margin-top: $space-sm;
+    padding-left: 0.5rem;
+  }
+}
+
+
+
+// Variants
+
+.list--unstyled,
+.unstyled-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

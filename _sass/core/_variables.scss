@@ -1,0 +1,65 @@
+// color
+$color-white:         #ffffff;
+$color-black:         #000000;
+
+$color-lightest-gray: #f5f5f6;
+$color-light-gray:    #dfdfdf;
+$color-gray:          #b8b8b8;
+$color-dark-gray:     #7c7c7c;
+$color-darkest-gray:  #2b2b2b;
+
+$color-lightest-blue: #c2e9fa;
+$color-light-blue:    #6dc3ea;
+$color-blue:          #399ed2;
+$color-dark-blue:     #0d77ac;
+$color-darkest-blue:  #005a87;
+
+$color-lightest-red:  #ffcbcc;
+$color-light-red:     #ed6372;
+$color-red:           #cd1f42;
+$color-dark-red:      #ae0518;
+$color-darkest-red:   #7d0002;
+
+$color-danger:        #d33838;
+$color-caution:       #f5a623;
+$color-success:       #00a175;
+
+// Typography
+$em-base:           16px;
+$base-font-size:    rem(16px);
+$title-styles:      ( font-size: rem(56px), line-height: rem(60px), font-weight: 600 );
+$h1-styles:         ( font-size: rem(42px), line-height: rem(48px), font-weight: 600 );
+$h2-styles:         ( font-size: rem(32px), line-height: rem(36px), font-weight: 400 );
+$h3-styles:         ( font-size: rem(26px), line-height: rem(32px), font-weight: 400 );
+$h4-styles:         ( font-size: rem(20px), line-height: rem(26px), font-weight: 600 );
+$h5-styles:         ( font-size: rem(16px), line-height: rem(24px), font-weight: 600 );
+$h6-styles:         ( font-size: rem(12px), line-height: rem(18px), font-weight: 600 );
+// $small-font-size:   map-get($h6-styles, font-size);
+$small-font-size:     rem(14px);
+$base-line-height:    1.5rem;
+$tight-line-height:   1.3rem;  // Useful for headings, or narrow columns of text
+
+$font-sans:       'freight-sans-pro', 'Freight Sans Pro', 'Verdana', 'Arial', sans-serif;
+$font-serif:      'freight-text-pro', 'Freight Text Pro', 'Georgia', 'Times New Roman', serif;
+$font-icon:       'FontAwesome';
+
+// Mobile First Breakpoints
+$mobile-up:         481px;
+$tablet-up:         768px;
+$midscreen-up:      960px;
+$widescreen-up:     1201px;
+
+// Magic Numbers
+$site-max-width:    1140px;
+$site-margins:      20px;
+$border-radius:     0;
+
+// Spacing
+$space-base: 1rem;
+$space-xxs:  $space-base * 0.25;
+$space-xs:   $space-base * 0.5;
+$space-sm:   $space-base * 0.75;
+$space-md:   $space-base * 1.25;
+$space-lg:   $space-base * 2;
+$space-xl:   $space-base * 3.25;
+$space-xxl:  $space-base * 5.25;

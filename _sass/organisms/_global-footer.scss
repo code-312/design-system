@@ -1,0 +1,77 @@
+.global-footer {
+  background-color: $color-lightest-gray;
+  border-top: 1px solid $color-gray;
+  color: $color-gray;
+  font-size: $small-font-size;
+  padding: 2em $site-margins;
+
+  p {
+    font-size: $small-font-size;
+  }
+}
+
+.global-footer__title,
+.global-footer-title {
+  margin-bottom: 2em;
+}
+
+.global-footer__social,
+.global-footer-social {
+  margin-bottom: 0.5em;
+
+  a {
+    color: $color-dark-gray;
+    font-size: map-get($h2-styles, font-size);
+    margin-right: 0.5em;
+    text-decoration: none;
+  }
+}
+
+.global-footer__nav,
+.global-footer-nav {
+  margin-bottom: 1em;
+
+  .menu {
+    @media screen and (max-width: $tablet-up) {
+      @include span-columns(6);
+      margin-bottom: 1rem;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 1rem;
+    }
+
+    @include media($tablet-up) {
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .menu-item {
+    font-size: $small-font-size;
+  }
+
+  .menu-item + .menu-item {
+    margin-top: 0.5rem;
+  }
+}
+
+.global-footer-form {
+  margin-bottom: 1rem;
+
+  label {
+    color: $color-black;
+  }
+
+  input[type="text"] {
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="submit"] {
+    margin-top: 0;
+  }
+}
+
+.global-footer-mayor-image {
+  margin-bottom: 1.5em;
+  width: 6em;
+}

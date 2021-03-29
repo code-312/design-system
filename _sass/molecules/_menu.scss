@@ -1,0 +1,80 @@
+.menu {
+  @include clearfix;
+}
+
+.menu__item, a.menu__item,
+.menu-item, a.menu-item {
+  @include transition(background-color 0.2s ease-out);
+
+  color: $color-black;
+  display: block;
+  font-size: $base-font-size;
+  text-decoration: none;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: 0.3em;
+    text-decoration: underline;
+  }
+
+  p {
+    line-height: $tight-line-height;
+    margin: 0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+// Variants
+
+.menu--bar,
+.bar-menu  {
+  .menu__item,
+  .menu-item {
+    display: inline-block;
+    float: left;
+    margin-right: 1em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .menu__item--active,
+  .active-menu-item {
+    color: $color-red;
+    font-weight: 600;
+  }
+}
+
+.menu--medium,
+.medium-menu {
+  .menu-item {
+    margin-bottom: 1em;
+    margin-left: -1em;
+    padding: 0.5em 1em;
+  }
+}
+
+.menu--large,
+.large-menu {
+  .menu-item {
+    margin-bottom: 1em;
+    margin-left: -1em;
+    padding: 1em;
+  }
+}
+
+.menu--button-menu,
+.button-menu {
+  display: block;
+
+  .menu-item {
+    display: inline-block;
+    float: left;
+    margin-left: 1em;
+  }
+}

@@ -1,0 +1,111 @@
+$global-header-logo-width-mobile: 100px !default;
+$global-header-logo-width: 150px !default;
+
+.global-header {
+  @include clearfix;
+
+  @include media($tablet-up) {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  padding: 1em $site-margins;
+}
+
+.global-header-logo {
+  img {
+    @include media($tablet-up) {
+      max-width: $global-header-logo-width;
+    }
+
+    max-width: $global-header-logo-width-mobile;
+  }
+}
+
+.global-header-title {
+  display: block;
+  font-size: $small-font-size;
+  line-height: $small-font-size * 1.5;
+  margin-bottom: 0;
+  margin-left: 2rem;
+  margin-right: 0;
+  margin-top: 0;
+
+  .subtitle {
+    clear: left;
+    color: $color-gray;
+    display: block;
+  }
+
+  @include media($tablet-up) {
+    font-size: $base-font-size;
+    margin-top: 0.5rem;
+
+    .subtitle {
+      font-size: $small-font-size;
+    }
+  }
+}
+
+.global-header-buttons {
+  @include media($tablet-up) {
+    top: 0.3rem;
+
+    .js-menu-button {
+      display: none;
+    }
+  }
+
+  position: relative;
+  top: -0.3rem;
+}
+
+.global-header-buttons a.button {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.global-header-navigation {
+  @include media($tablet-up) {
+    display: block;
+    padding-top: $space-lg;
+  }
+
+  display: none;
+}
+
+.global-header-menu {
+  position: relative;
+  top: 0.3em;
+}
+
+.global-header-search {
+  @include media($tablet-up) {
+    display: block;
+  }
+
+  display: none;
+  margin-top: 0.45em;
+}
+
+// For use on reverse backgrounds
+.reverse-global-header {
+  color: $color-white;
+
+  .alert {
+    a {
+      background-color: rgba(0, 0, 0, 0.15);
+      border-bottom: 0;
+      color: $color-white;
+    }
+  }
+
+  .global-header-menu .menu-item {
+    color: $color-white;
+  }
+
+  .global-header-menu .active-menu-item {
+    color: $color-white;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,29 @@
+.grid-box {
+  @include outer-container;
+
+  @include media($tablet-up) {
+    @for $i from 1 through 12 {
+      .col-#{$i} {
+        @include span-columns($i);
+      }
+
+      .shift-#{$i} {
+        @include shift($i);
+      }
+    }
+
+    // Specificies end of a row.
+    // Required if grid-box contains multiple rows.
+    // Required if browser does not support :last-child
+    .end-row {
+      @include omega;
+    }
+
+    // Fixes grid alignment when grid-items have varying heights.
+    .end-row + .grid-item {
+      clear: left;
+    }
+  }
+
+  max-width: $site-max-width;
+}

@@ -1,0 +1,165 @@
+html {
+  font-family: $font-sans;
+  font-size: $em-base;
+}
+
+body {
+  color: $color-black;
+  font-size: $base-font-size;
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: $space-sm;
+  margin-top: $space-sm;
+}
+
+a {
+  color: $color-dark-blue;
+
+  &:hover,
+  &:active,
+  &:visited {
+    color: $color-dark-blue;
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1, h2 {
+  clear: both;
+  margin-bottom: $space-sm;
+  margin-top: $space-md;
+}
+
+h3, h4, h5, h6 {
+  margin-bottom: $space-xs;
+  margin-top: $space-sm;
+}
+
+// Create heading mixins
+
+@mixin title {
+  font-size: map-get($title-styles, font-size);
+  font-weight: map-get($title-styles, font-weight);
+  line-height: map-get($title-styles, line-height);
+}
+
+@mixin h1 {
+  font-size: map-get($h1-styles, font-size);
+  font-weight: map-get($h1-styles, font-weight);
+  line-height: map-get($h1-styles, line-height);
+}
+
+@mixin h2 {
+  font-size: map-get($h2-styles, font-size);
+  font-weight: map-get($h2-styles, font-weight);
+  line-height: map-get($h2-styles, line-height);
+}
+
+@mixin h3 {
+  font-size: map-get($h3-styles, font-size);
+  font-weight: map-get($h3-styles, font-weight);
+  line-height: map-get($h3-styles, line-height);
+}
+
+@mixin h4 {
+  font-size: map-get($h4-styles, font-size);
+  font-weight: map-get($h4-styles, font-weight);
+  line-height: map-get($h4-styles, line-height);
+}
+
+@mixin h5 {
+  font-size: map-get($h5-styles, font-size);
+  font-weight: map-get($h5-styles, font-weight);
+  line-height: map-get($h5-styles, line-height);
+}
+
+@mixin h6 {
+  font-size: map-get($h6-styles, font-size);
+  font-weight: map-get($h6-styles, font-weight);
+  line-height: map-get($h6-styles, line-height);
+  text-transform: uppercase;
+}
+
+@mixin large-text {
+  font-family: $font-sans;
+  font-size: map-get($h3-styles, font-size);
+  line-height: map-get($h3-styles, line-height);
+}
+
+@mixin medium-text {
+  font-family: $font-sans;
+  font-size: map-get($h4-styles, font-size);
+  line-height: map-get($h4-styles, line-height);
+}
+
+@mixin detail-text {
+  font-family: $font-sans;
+  font-size: $small-font-size;
+  line-height: $tight-line-height;
+}
+
+h1, .h1 {
+  @include h1;
+}
+
+h2, .h2 {
+  @include h2;
+}
+
+h3, .h3 {
+  @include h3;
+}
+
+h4, .h4 {
+  @include h4;
+}
+
+h5, .h5 {
+  @include h5;
+}
+
+h6, .h6 {
+  @include h6;
+}
+
+.text--lead-in,
+.lead-in-text {
+  color: $color-dark-gray;
+  font-size: map-get($h4-styles, font-size);
+  line-height: map-get($h4-styles, line-height);
+  margin-bottom: $space-lg;
+}
+
+.text--detail,
+.detail-text {
+  @include detail-text;
+}
+
+.text--lg,
+.large-text {
+  @include large-text;
+}
+
+.text--left,
+.left-align-text {
+  text-align: left;
+}
+
+.text--center,
+.align-center-text {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
